@@ -16,13 +16,13 @@ public class ListadoEmpleado {
 		
 		return esValido;
 	}
-	/*
+	
 	public static void listarTodos() {
-		for(Empleado empleado : listaEmpleados) {
+		for(Empleado empleado : listaEmpleados.values()) {
 			System.out.println(empleado);
 		}
 	}
-	*/
+
 	public static Empleado buscarPorDni(String dni) {
 		return listaEmpleados.get(dni);
 	}
@@ -61,13 +61,12 @@ public class ListadoEmpleado {
 
 		return sumaTotal;
 	}
-	/*
+	
 	public static void listarEmpleadosAltoDesempenio() {
-		for(Empleado empleado : listaEmpleados) {
-			if (empleado.empleadoAltamenteBonificado()) {
-				System.out.println(empleado);
-			}
-		}
-	}
-	*/
+        for (Empleado empleado : listaEmpleados.values()) {
+            if (empleado.empleadoAltamenteBonificado()) {
+                System.out.println(empleado);
+            }
+        }
+    }
 }

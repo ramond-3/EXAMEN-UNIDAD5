@@ -41,7 +41,7 @@ public class Principal {
 					salarioBase= entrada.nextDouble();
 					System.out.println("Porcentaje de Bonificacion:");
 					porcentajeBonus = entrada.nextDouble();
-					empleado = new Empleado(dni, nombre, salarioBase, porcentajeBonus)
+					empleado = new Empleado(dni, nombre, salarioBase, porcentajeBonus);
 					if (ListadoEmpleado.añadirEmpleado(empleado)) {
 						System.out.println("Empleado añadido correctamente");
 					} else {
@@ -51,7 +51,7 @@ public class Principal {
 					break;
 					
 				case 2: 
-					ListadoEmpleado.listarTodos();
+					//ListadoEmpleado.listarTodos();
 					break;	
 					
 				case 3: 
@@ -94,8 +94,7 @@ public class Principal {
 					}
 					break;
 					
-					break;
-				default:
+					default:
 					System.out.println("La opcion debe de ser una de las señaladas");;
 			}
 		} while (opcionJugador != 8);
